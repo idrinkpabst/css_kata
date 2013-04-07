@@ -1,0 +1,20 @@
+@import "bootstrap"
+
+=background-image-wh($file-name)
+  width: image-width($file-name)
+  height: image-height($file-name)
+  background: url($file-name) no-repeat
+
+
+#better-beer
+  float: left
+  +background-image-wh('better-beer.png')
+
+#menu-promo
+  float: right
+  +background-image-wh('menu-items.png')
+
+#logo
+  display: block
+  margin: auto
+  +background-image-wh('logo.png')
