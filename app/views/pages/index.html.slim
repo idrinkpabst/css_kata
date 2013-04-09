@@ -12,35 +12,50 @@ header
 
     .row.nav-row
       ul.nav.nav-pills.my-nav
-        li
-          a href="#" Home
-        li
-          a href="#" About
-        li
-          a href="#" Food
-        li
-          a href="#" Beer
-        li
-          a href="#" Catering
-        li
-          a href="#" Locations
-        li
-          a href="#" Contact
+        - %w[Home About Food Beer Catering Locations Contact].each do |menu_item|
+          li
+            a href="#" #{menu_item}
 
 section id="promotional"
   .container
     .row-fluid
       = image_tag 'featured.jpg'
       #selections
-        .row-fluid
+        .row-fluid.beer-row
           .promo-text Beers on Tap 
           .promo-number 35
-        .row-fluid
+        .row-fluid.beer-row
           .promo-text Bottle Selections 
           .promo-number 150
-        .row-fluid 
+        .row-fluid.beer-row
           .promo-text Beers Brewed on Site 
           .promo-number 8
+        .row-fluid.buttons-row
+          .span5.menu-row
+            a.menu href="#" View our Food Menu
+          .span5.offset2.menu-row
+            a.menu href="#" View our Beer Menu
+
+footer id="primary-foot"
+  .container
+    section id="history"
+      header
+        h1 Our History
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        a href="#" Read more
+    section id="info"
+      nav id="footer-nav"
+        ul
+        - %w[Home About Cases Servies Clients Contact].each do |menu_item|
+          li
+            a href="#" #{menu_item}
+      p.copyright
+        | &copy; 2013 BeerCo.com.  This is a fictional case study, although the author does enjoy great food and better beer
       
-      / a.menu href="#" View our Food Menu
-      / a.menu href="#" View our Beer Menu
+
