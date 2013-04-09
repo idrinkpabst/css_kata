@@ -30,20 +30,17 @@ header
 section id="promotional"
   .container
     .row-fluid
-      .span7
-        = image_tag 'featured.jpg'
-      .span5
+      = image_tag 'featured.jpg'
       #selections
-        ul
-          li 
-            | Beers on Tap 
-            span 35
-          li.bottle 
-            | Bottle Selections 
-            span 150
-          li 
-            | Beers Brewed on Site 
-            span 8
+        .row-fluid
+          .promo-text Beers on Tap 
+          .promo-number 35
+        .row-fluid
+          .promo-text Bottle Selections 
+          .promo-number 150
+        .row-fluid 
+          .promo-text Beers Brewed on Site 
+          .promo-number 8
       
       / a.menu href="#" View our Food Menu
       / a.menu href="#" View our Beer Menu

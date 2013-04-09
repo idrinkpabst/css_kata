@@ -82,6 +82,7 @@ ul
   text-transform: uppercase
   +box-shadow(0px 1px 2px #ccc)
   height: 36px
+  margin-bottom: 20px
 
 ul.my-nav
   display: block
@@ -102,18 +103,27 @@ ul.my-nav
     +transform(scale(1.1) rotate(-2deg))
 
 #selections
-  ul li
+  float: right
+  width: 960px - image-width('featured.jpg') - 75px
+  .row-fluid
     background: url(divider.png) no-repeat bottom left
     //font: normal 35px Tahoma, Arial, sans-serif
     font: normal 35px "LeagueGothicRegular", Georgia, serif
-    margin-bottom: ((image-height('featured.jpg') * 0.6) - (3 * 35)) / 3
+    // margin-bottom: ((image-height('featured.jpg') * 0.6) - (3 * 35)) / 3
+    height: image-height('featured.jpg') * 0.6 / 3
     text-transform: uppercase
     text-shadow: 1px 1px 1px #fff
     color: #787871
-  span
+    position: relative
+  .promo-text
+    position: absolute
+    bottom: 0
+  .promo-number
+    position: absolute
+    right: 0
     color: #dc692e
-    float: right
     font: normal 75px "LeagueGothicRegular", Tahoma, Arial, sans-serif
+    float: right
 
 
 
