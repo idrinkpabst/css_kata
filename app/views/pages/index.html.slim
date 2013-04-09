@@ -52,9 +52,9 @@ footer id="primary-foot"
     section id="info"
       nav id="footer-nav"
         ul
-        - %w[Home About Cases Servies Clients Contact].each do |menu_item|
-          li
-            a href="#" #{menu_item}
+          - %w[Home About Cases Servies Clients Contact].each do |menu_item|
+            li
+              a href="#" #{menu_item}
       p.copyright
         | &copy; 2013 BeerCo.com.  This is a fictional case study, although the author does enjoy great food and better beer
       

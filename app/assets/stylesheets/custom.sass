@@ -50,8 +50,11 @@ $almost-white: #fafaf6
   height: image-height($file-name)
   background: url($file-name) no-repeat
 
-ul
+ul, ol
   list-style: none
+  padding: 0
+  margin: 0
+
 
 body
   background: url('bg.png') repeat
@@ -195,4 +198,39 @@ ul.my-nav
 
 #history p a:hover 
   text-decoration: none
+
+
+
+#info
+  float: right
+  width: 325px
+  margin-top: 15px
+  a
+    color: #6a6a5d
+    &:visited
+      color: #6a6a5d
+    &:hover
+      text-decoration: underline
+  ul li
+    display: inline
+    border-right: 1px solid #9f9f8f
+    padding: 0 5px 0 1px
+    font: bold 11px "DroidSansBold", Verdana, sans-serif
+    text-transform: uppercase
+    text-align: right
+    &:last-child
+      border-right: none
+
+.copyright
+  background: url('bottle.png') left no-repeat
+  opacity: .15
+  padding: 20px 0 0 35px
+  height: 67px
+  font: normal 10px "DroidSansRegular", Verdana, sans-serif
+  line-height: 16px
+  margin-top: 15px
+  color: #000000
+  +transition(opacity .3s ease-in-out)
+  &:hover
+    opacity: .5
 
