@@ -3,24 +3,47 @@
 header
   .container
     .row
-      a href="#" id="better-beer"
-      a href="#" id="menu-promo"
-      a href="#" id="logo"
+      .span4
+        a href="#" id="better-beer"
+      .span4
+        a href="#" id="logo"
+      .span4
+        a href="#" id="menu-promo"
 
+    .row.nav-row
+      ul.nav.nav-pills.my-nav
+        li
+          a href="#" Home
+        li
+          a href="#" About
+        li
+          a href="#" Food
+        li
+          a href="#" Beer
+        li
+          a href="#" Catering
+        li
+          a href="#" Locations
+        li
+          a href="#" Contact
 
-nav
-  ul
-    li
-      a href="#" Home
-    li
-      a href="#" About
-    li
-      a href="#" Food
-    li
-      a href="#" Beer
-    li
-      a href="#" Catering
-    li
-      a href="#" Locations
-    li
-      a href="#" Contact
+section id="promotional"
+  .container
+    .row-fluid
+      .span7
+        = image_tag 'featured.jpg'
+      .span5
+      #selections
+        ul
+          li 
+            | Beers on Tap 
+            span 35
+          li.bottle 
+            | Bottle Selections 
+            span 150
+          li 
+            | Beers Brewed on Site 
+            span 8
+      
+      / a.menu href="#" View our Food Menu
+      / a.menu href="#" View our Beer Menu

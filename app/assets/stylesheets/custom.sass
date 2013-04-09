@@ -1,20 +1,119 @@
 @import "bootstrap"
+@import "compass"
+
+
+@charset "UTF-8"
+
+
+@font-face
+  font-family: 'MarketingScriptRegular'
+  src: font-url('MarketingScript-webfont.eot')
+  src: font-url('MarketingScript-webfont.woff') format("woff")
+  src: font-url('MarketingScript-webfont.ttf') format("truetype")
+  src: font-url('MarketingScript-webfont.svg') format("svg")
+  font-weight: normal
+  font-style: normal
+
+
+@font-face
+  font-family: 'LeagueGothicRegular'
+  src: font-url('League_Gothic-webfont.eot')
+  src: font-url('League_Gothic-webfont.woff') format("woff")
+  src: font-url('League_Gothic-webfont.ttf') format("truetype")
+  src: font-url('League_Gothic-webfont.svg') format("svg")
+  font-weight: bold
+  font-style: normal
+
+@font-face
+  font-family: 'DroidSansRegular'
+  src: font-url('DroidSans-webfont.eot')
+  src: font-url('DroidSans-webfont.woff') format("woff")
+  src: font-url('DroidSans-webfont.ttf') format("truetype")
+  src: font-url('DroidSans-webfont.svg') format("svg")
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'DroidSansBold'
+  src: font-url('DroidSans-Bold-webfont.eot')
+  src: font-url('DroidSans-Bold-webfont.woff') format("woff")
+  src: font-url('DroidSans-Bold-webfont.ttf') format("truetype")
+  src: font-url('DroidSans-Bold-webfont.svg') format("svg")
+  font-weight: bold
+  font-style: normal
+
+$num_nav_items: 7
+$almost-white: #fafaf6
 
 =background-image-wh($file-name)
   width: image-width($file-name)
   height: image-height($file-name)
   background: url($file-name) no-repeat
 
+ul
+  list-style: none
 
 #better-beer
   float: left
   +background-image-wh('better-beer.png')
+  opacity: 0.65
+  &:hover
+    opacity: 1
 
 #menu-promo
   float: right
   +background-image-wh('menu-items.png')
+  opacity: 0.65
+  &:hover
+    opacity: 1
 
 #logo
+  float: none
   display: block
-  margin: auto
+  margin: 0 auto
   +background-image-wh('logo.png')
+  +transition(opacity .2s ease-in-out)
+  &:hover
+    opacity: 0.65
+
+.nav-row
+  background-color: $grayLighter
+  font: bold 11px Verdana, sans-serif
+  text-transform: uppercase
+  +box-shadow(0px 1px 2px #ccc)
+  height: 36px
+
+ul.my-nav
+  display: block
+  li
+    width: (100 / $num_nav_items) * 1%
+    text-align: center
+    a
+      +transition(all .3s ease-in-out)
+      &:hover
+        color: $orange
+        background: $black
+    
+#promotional img
+  float: left
+  border: 15px solid $almost-white
+  +box-shadow(0px 1px 1px #ccc)
+  &:hover
+    +transform(scale(1.1) rotate(-2deg))
+
+#selections
+  ul li
+    background: url(divider.png) no-repeat bottom left
+    //font: normal 35px Tahoma, Arial, sans-serif
+    font: normal 35px "LeagueGothicRegular", Georgia, serif
+    margin-bottom: ((image-height('featured.jpg') * 0.6) - (3 * 35)) / 3
+    text-transform: uppercase
+    text-shadow: 1px 1px 1px #fff
+    color: #787871
+  span
+    color: #dc692e
+    float: right
+    font: normal 75px "LeagueGothicRegular", Tahoma, Arial, sans-serif
+
+
+
